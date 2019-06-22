@@ -32,7 +32,7 @@ export class App extends Component {
   //Functions
   //Fetch data with Axios
   fetchPhotos = (query = 'sun') => {
-    let URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&text=${query}&per_page=24&api_key=${apiKey}&sort=relevance&safe_search=1&format=json&nojsoncallback=1` 
+    let URL = `https://www.flickr.com/services/rest/?method=flickr.photos.search&text='${query},photography'&per_page=24&api_key=${apiKey}&sort=relevance&safe_search=1&format=json&nojsoncallback=1` 
     this.setState({ isLoading: true })
 
     axios.get(URL)
